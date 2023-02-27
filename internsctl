@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [ "$1" == "cpu" ] && [ "$2" == "getinfo" ]
+then
+       lscpu	
+fi
+
+if [ "$1" == "memory" ] && [ "$2" == "getinfo" ]
+then
+       free
+fi
+
+
+if  [ "$1" == "--help" ]
+then
+       echo "help page for internsctl"
+fi
+
+if [ "$1" == "--version" ]
+then
+       echo "v0.1.0"
+fi
+
+
+if [ "$1" == "user" ] && [ "$2" == "list" ]
+then
+        cat /etc/passwd
+fi
+
+
+
+
